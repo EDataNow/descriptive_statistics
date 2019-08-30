@@ -38,7 +38,7 @@ module DescriptiveStatistics
           enumerable.each
         end
       else
-        []
+        [].each
       end
     end
 
