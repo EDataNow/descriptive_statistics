@@ -28,13 +28,17 @@ module DescriptiveStatistics
     end
 
     def self.to_array(enumerable)
-      case enumerable
-      when Hash
-        enumerable.values.each
-      when Set
-        enumerable.to_a.each
+      if enumerable
+        case enumerable
+        when Hash
+          enumerable.values.each
+        when Set
+          enumerable.to_a.each
+        else
+          enumerable.each
+        end
       else
-        enumerable.each
+        enumerable
       end
     end
 
